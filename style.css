@@ -1,0 +1,196 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-image: url(https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+}
+main{
+  background-color: rgb(255 255 255 / 31%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1250px;
+  width: 100%;
+  border-radius: 5px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-weight: 500;
+  padding: 1rem 1rem 2rem 1rem;
+  overflow: auto;
+}
+nav{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid white;
+}
+nav > h1{
+  font-size: 2rem;
+  cursor: pointer;
+}
+nav  div  a{
+  text-decoration: none;
+  color: black;
+  margin: 5px;
+  padding: 5px;
+  font-weight: 700;
+}
+nav  div  a:hover{
+  transition: ease-in-out 300ms;
+  background-color: whitesmoke;
+}
+#hero,#aboutus,#skills,#project_items,#form{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+.herosection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+
+}
+.hero_section1 img{
+  width: 250px;
+  height: 250px;
+}
+.hero_section2{
+ text-align: center;
+ font-size: 1.5rem;
+}
+
+.skills_items > img{
+ width: 50px;
+ height: 50px;
+}
+.hero_description{
+  text-align: center;
+}
+.hero_description > h1{
+  font-size: 2rem;
+}
+.hero_description > p{
+  font-family: Verdana;
+}
+
+#skills{
+  /* margin: 1rem; */
+  display: grid;
+  grid-template-columns: [one] 50% [two] 50%;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.skills > .skills_items,.skills > .project_items{
+  min-width: 250px;
+  min-height: 250px;
+  padding: 20px;
+  background-color: rgb(255 255 255 / 31%);
+  border-radius: 5px;
+  border: 2px solid rgb(255 255 255 / 31%);
+}
+.skills_items > img{
+  cursor: pointer;
+  margin-left: 20px;
+}
+.project1 > img{
+  cursor: pointer;
+}
+.project1{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.project1 > .project1_des{
+  margin-left: 50px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.project1 > img{
+  width: 80px;
+  height: 80px;
+}
+@media only screen and (max-width: 750px){
+  #skills{
+      grid-template-columns: [one] 100%;
+      grid-template-rows: [one] [two];
+  }
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+main {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
+}
+
+fieldset{
+  border: 2px solid black;
+  padding: 10px;
+}
+fieldset > input{
+  width: 100%;
+  height: 30px;
+}
+fieldset > label{
+  font-family: Verdana;
+}
+.submit{
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+@media (max-width: 600px){
+     nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+     .herosection{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+     }
+     .project1{
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          width: 100%;
+      }
+      .project1 > .project1_des{
+        margin: 5px;
+      }
+     
+}
+@media only screen and (max-width: 1000px){
+  nav div a{
+    display: none;
+  }
+}
